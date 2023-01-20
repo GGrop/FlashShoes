@@ -29,14 +29,14 @@ function ItemCount(props) {
   return (
     <div className="mySelectorCarritoContainer">
       <div className="mySelectorCarrito">
-        <button className="myButtton BtnAddRes" onClick={resta} type="button">
+        <button className="myButtton BtnAddRes " onClick={resta} type="button">
           <span>-</span>
         </button>
         <div className="myLabel">
           <span className="SpanCount">{count}</span>
         </div>
-        <button className="myButtton BtnAddRes" onClick={suma} type="button">
-          <span>+</span>
+        <button className="myButtton BtnAddRes whitebuttons" onClick={suma} type="button">
+          +
         </button>
       </div>
       <button

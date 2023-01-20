@@ -162,7 +162,7 @@
 //     },
 // ]
 
-            // CON ESTO MANDO TODO A LA BASE DE DATOS
+// CON ESTO MANDO TODO A LA BASE DE DATOS
 
 // const db = getFirestore()
 // const queryColection = collection(db,'productos')
@@ -176,22 +176,20 @@
 // }
 // SubirData(Productos)
 
-            // CON ESTO MANDO TODO A LA BASE DE DATOS
-
-
+// CON ESTO MANDO TODO A LA BASE DE DATOS
 
 // EJEMPLO
-    // const sendOrder=()=>{
-    //     const order={
-    //         buyer:{name:'pedrito', phone:'12345', email:'pedritomail'},
-    //         item:[{name:'bici', price:'999'}],
-    //         total:100
-    //     };
-    //     const db =getFirestore()
-    //     const orderCollection = collection(db, 'orders')
-    //     addDoc(orderCollection, order)
-    // }
-    // sendOrder()
+// const sendOrder=()=>{
+//     const order={
+//         buyer:{name:'pedrito', phone:'12345', email:'pedritomail'},
+//         item:[{name:'bici', price:'999'}],
+//         total:100
+//     };
+//     const db =getFirestore()
+//     const orderCollection = collection(db, 'orders')
+//     addDoc(orderCollection, order)
+// }
+// sendOrder()
 // EJEMPLO
 
 // PARA TRAER UN SOLO ITEM
@@ -199,7 +197,7 @@
 //         const db = getFirestore()
 //         const queryDb = doc(db, 'productos',detalleId)
 //         getDoc(queryDb)
-//         .then(resp=> setProducto({id:resp.id, ...resp.data()})) 
+//         .then(resp=> setProducto({id:resp.id, ...resp.data()}))
 //     },[])
 //     console.log(producto)
 // PARA TRAER UN SOLO ITEM
@@ -246,41 +244,38 @@
 //         }
 //     }, [categoriaId])
 
-
-//PARA CATEGORIAS
+// PARA CATEGORIAS
 // useEffect(()=>{
 //     const db = getFirestore()
 //     const queryColection = collection(db, 'productos')
 //     getDocs(queryColection)
-//     .then(resp=> setProducto(resp.docs.map(prod=>( {id:prod.id, ...prod.data()} ) ))) //EL DATO ESTA EN RESP.DOCS.MAPS
+//     .then(resp=> setProducto(resp.docs.map(prod=>( {id:prod.id, ...prod.data()} ) )))
 //     .catch(err => console.log(err))
 //     .finally(()=> console.log('loading'))
 // },[])
 // console.log(producto, 'tengo q hacer division de categorias')
-//PARA CATEGORIAS 
+// PARA CATEGORIAS
 
-//PARA HOME (DESCUENTOS)
-            // useEffect(()=>{
-            //     const db = getFirestore()
-            //     const queryColection = collection(db, 'productos')
-            //     const queryFilter = query(queryColection, where('price','>',0))
-            //     getDocs(queryFilter)
-            //     .then(resp=> setProductos(resp.docs.map(prod=>( {id:prod.id, ...prod.data()} ) )))
-            //     .catch(err => console.log(err))
-            //     .finally(()=> console.log('loading'))
-            // },[])
-            // console.log(productos)
-//PARA HOME (DESCUENTOS)
+// PARA HOME (DESCUENTOS)
+// useEffect(()=>{
+//     const db = getFirestore()
+//     const queryColection = collection(db, 'productos')
+//     const queryFilter = query(queryColection, where('price','>',0))
+//     getDocs(queryFilter)
+//     .then(resp=> setProductos(resp.docs.map(prod=>( {id:prod.id, ...prod.data()} ) )))
+//     .catch(err => console.log(err))
+//     .finally(()=> console.log('loading'))
+// },[])
+// console.log(productos)
+// PARA HOME (DESCUENTOS)
 
-
-
-//PARA TRAER UN SOLO ITEM
-    // useEffect(()=>{
-    //     const db = getFirestore()
-    //     const queryDb = doc(db, 'productos','Znfp2Vt86ytd74XeAp5N')
-    //     getDoc(queryDb)
-    //     .then(resp=> 
-    //         setProducto({id:resp.id, ...resp.data()})) 
-    //     },[])
-    //     console.log(producto)
-//PARA TRAER UN SOLO ITEM
+// PARA TRAER UN SOLO ITEM
+// useEffect(()=>{
+//     const db = getFirestore()
+//     const queryDb = doc(db, 'productos','Znfp2Vt86ytd74XeAp5N')
+//     getDoc(queryDb)
+//     .then(resp=>
+//         setProducto({id:resp.id, ...resp.data()}))
+//     },[])
+//     console.log(producto)
+// PARA TRAER UN SOLO ITEM

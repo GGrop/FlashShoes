@@ -1,24 +1,13 @@
-import { useCartContext } from '../../context/CartContext'
-const ContadorCarrito =()=>{
+import React from 'react';
+import { useCartContext } from '../../context/CartContext';
 
-const{CantidadTotalCarrito}= useCartContext()
+function ContadorCarrito() {
+  const { CantidadTotalCarrito } = useCartContext();
 
-const Cant =CantidadTotalCarrito()
+  const Cant = CantidadTotalCarrito();
 
-    return(
-        <div>
-            { Cant ?
-            <i className='countCarrito'>{Cant}</i>
-            :
-            <div> </div>
-            }
-        </div>
-    )
+  return (
+    <div>{Cant ? <i className="countCarrito">{Cant}</i> : <div> </div>}</div>
+  );
 }
-export default ContadorCarrito
-
-
-// return(
-//     <i className='countCarrito'>{Cant}</i>
-// )
-
+export default ContadorCarrito;

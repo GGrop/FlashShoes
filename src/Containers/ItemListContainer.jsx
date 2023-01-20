@@ -1,11 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
-import { Swiper, SwiperSlide } from 'swiper/react';
-import { Autoplay, Pagination, Navigation } from 'swiper';
 import { getFirestore, collection, getDocs } from 'firebase/firestore';
 import ItemList from '../components/ItemList/ItemList';
 import '../components/Css.css';
 import Loading from '../components/Loading/Loading';
+import MySwiper from '../components/MySwiper/MySwiper';
 
 function ItemListContainer() {
   const [productos, setProductos] = useState([]);
@@ -36,6 +35,7 @@ function ItemListContainer() {
     }, 500);
     setLoading(1);
   }, [categoriaId]);
+  console.log(categoriaId);
 
   return (
     <div>
@@ -43,62 +43,7 @@ function ItemListContainer() {
         <Loading />
       ) : (
         <div className="Container">
-          <Swiper
-            spaceBetween={30}
-            centeredSlides
-            autoplay={{
-              delay: 3000,
-              disableOnInteraction: false,
-            }}
-            pagination={{
-              clickable: true,
-            }}
-            navigation
-            modules={[Autoplay, Pagination, Navigation]}
-            className="mySwiper2"
-          >
-            {categoriaId === 'running' ? (
-              <div>
-                <SwiperSlide>
-                  <div className="Aside1" />
-                </SwiperSlide>
-                <SwiperSlide>
-                  <div className="Aside2" />
-                </SwiperSlide>
-                <SwiperSlide>
-                  <div className="Aside3" />
-                </SwiperSlide>
-              </div>
-            ) : (
-              <div>
-                {categoriaId === 'street' ? (
-                  <div>
-                    <SwiperSlide>
-                      <div className="Aside2" />
-                    </SwiperSlide>
-                    <SwiperSlide>
-                      <div className="Aside1" />
-                    </SwiperSlide>
-                    <SwiperSlide>
-                      <div className="Aside3" />
-                    </SwiperSlide>
-                  </div>
-                ) : (
-                  <div>
-                    <SwiperSlide>
-                      <div className="Aside3" />
-                    </SwiperSlide>
-                    <SwiperSlide>
-                      <div className="Aside1" />
-                    </SwiperSlide>
-                    <SwiperSlide>
-                      <div className="Aside2" />
-                    </SwiperSlide>
-                  </div>
-                )}
-              </div>
-            )}
-          </Swiper>
+          <MySwiper categoriaId={categoriaId} />
           <div className="CardList">
             <div className="CardListAuxiliar">
               <ItemList myArray={productos} />

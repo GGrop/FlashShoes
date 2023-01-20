@@ -24,6 +24,8 @@
         "no-param-reassign":"off",
         "no-return-assign":"off",
         "react/jsx-no-constructed-context-values":"off",
-        "react/jsx-filename-extension":"off"
+        "react/jsx-filename-extension":"off",
+        "eqeqeq":"off",
+        "quotes":"off"
     }
 }

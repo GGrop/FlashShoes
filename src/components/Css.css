@@ -64,10 +64,10 @@ span {
   font-size: 0.8rem;
   color: #ffffff;
 }
-/* .whitebuttons {
+.whitebuttons {
   font-size: 0.8rem;
   color: #ffffff;
-} */
+}
 .appMain {
   display: flex;
   flex-direction: column;
